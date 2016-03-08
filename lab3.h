@@ -4,8 +4,8 @@
 class mod
 {
 private:
-	int n;    // вычеты по какому модулю
-	int a;    // вводимое число
+	int n;    // вычеты по какому модулю // module
+	int a;    // вводимое число // entered number
 
 public:
 	mod()
@@ -29,7 +29,7 @@ public:
 				return i;
 			}
 		}
-		std::cout << "обратного не существует" << std::endl;
+		std::cout << "doesn't exist " << std::endl;
 		return 0;
 	}
 
@@ -44,17 +44,17 @@ public:
 
 	int operator-(const mod & b)
 	{
-		return (n == b.n) ? ((a - b.a) % n) : n; // при правильной работе оператора функция никогда не вернет n, значит это будет сигналом об ошибке
+		return (n == b.n) ? ((a - b.a) % n) : n; // function never returns n working properly, then it would be an error signal
 	}
 
 	int operator+(const mod & b)
 	{
-		return (n == b.n) ? ((a + b.a) % n) : n; // при правильной работе оператора функция никогда не вернет n, значит это будет сигналом об ошибке
+		return (n == b.n) ? ((a + b.a) % n) : n; // function never returns n working properly, then it would be an error signal
 	}
 
 	int operator*(const mod & b)
 	{
-		return (n == b.n) ? ((a * b.a) % n) : n; // при правильной работе оператора функция никогда не вернет n, значит это будет сигналом об ошибке
+		return (n == b.n) ? ((a * b.a) % n) : n; // function never returns n working properly, then it would be an error signal
 	}
 
 	~mod()
